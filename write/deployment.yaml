@@ -1,35 +1,40 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: history-deployment
+  name: write-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: history
+      app: write
   template:
     metadata:
       labels:
-        app: history
+        app: write
     spec:
       containers:
-        - name: history
-          image: seongjaegreen/history
+        - name: write
+          image: seongjaegreen/write
           ports:
-            - containerPort: 8084
+            - containerPort: 8082
           env:
             - name: POSTGRES_URL
               valueFrom:
                 secretKeyRef:
-                  name: history-secret
+                  name: write-secret
                   key: POSTGRES_URL
             - name: POSTGRES_USER
               valueFrom:
                 secretKeyRef:
-                  name: history-secret
+                  name: write-secret
                   key: POSTGRES_USER
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: history-secret
+                  name: write-secret
                   key: POSTGRES_PASSWORD
+            - name: TRANSFORM_URL
+              valueFrom:
+                secretKeyRef:
+                  name: write-secret
+                  key: TRANSFORM_URL

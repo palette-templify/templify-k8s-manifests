@@ -1,17 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: history-ingress
-  namespace: history
+  name: gateway-ingress
 spec:
   rules:
-    - host: history.211.254.212.252.sslip.io
+    - host: gateway.211.254.212.252.sslip.io
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: history-service
+                name: gateway-service
                 port:
-                  number: 8082
+                  number: 8080

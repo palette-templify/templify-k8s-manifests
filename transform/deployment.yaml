@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: transform-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: transform
+  template:
+    metadata:
+      labels:
+        app: transform
+    spec:
+      containers:
+        - name: transform
+          image: seongjaegreen/transform
+          ports:
+            - containerPort: 8083
+          env:
+            - name: POSTGRES_URL
+              valueFrom:
+                secretKeyRef:
+                  name: transform-secret
+                  key: POSTGRES_URL
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: transform-secret
+                  key: POSTGRES_USER
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: transform-secret
+                  key: POSTGRES_PASSWORD
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: transform-secret
+                  key: OPENAI_API_KEY
+            - name: HISTORY_URL
+              valueFrom:
+                secretKeyRef:
+                  name: transform-secret
+                  key: HISTORY_URL
