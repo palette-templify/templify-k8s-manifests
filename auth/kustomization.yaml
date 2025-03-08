@@ -6,6 +6,5 @@ resources:
 - deployment.yaml
 - service.yaml
 images:
-- name: seongjaegreen/auth
-  newTag: "0000"
 - name: seongjaegreen/templify-auth
+  newTag: "0000"

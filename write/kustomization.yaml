@@ -7,5 +7,4 @@ resources:
 - service.yaml
 images:
 - name: seongjaegreen/templify-write
-- name: seongjaegreen/write
   newTag: "0000"

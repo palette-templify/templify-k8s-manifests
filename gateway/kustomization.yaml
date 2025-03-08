@@ -6,6 +6,5 @@ resources:
 - service.yaml
 - ingress.yaml
 images:
-- name: seongjaegreen/gateway
-  newTag: "0000"
 - name: seongjaegreen/templify-gateway
+  newTag: "0000"

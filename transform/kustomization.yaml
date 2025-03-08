@@ -7,5 +7,4 @@ resources:
 - service.yaml
 images:
 - name: seongjaegreen/templify-transform
-- name: seongjaegreen/transform
-  newTag: "0000"
+  newTag: ""
