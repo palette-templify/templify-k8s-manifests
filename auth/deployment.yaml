@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: seongjaegreen/auth
+          image: seongjaegreen/templify-auth
           ports:
             - containerPort: 8081
           env:

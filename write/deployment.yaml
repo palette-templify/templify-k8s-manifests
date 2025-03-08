@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: write
-          image: seongjaegreen/write
+          image: seongjaegreen/templify-write
           ports:
             - containerPort: 8082
           env:

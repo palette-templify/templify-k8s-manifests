@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: history
-          image: seongjaegreen/history
+          image: seongjaegreen/templify-history
           ports:
             - containerPort: 8084
           env:
