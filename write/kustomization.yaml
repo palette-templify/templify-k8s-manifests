@@ -7,4 +7,4 @@ resources:
 - service.yaml
 images:
 - name: seongjaegreen/templify-write
-  newTag: "202503082327"
+  newTag: "202503082343"
