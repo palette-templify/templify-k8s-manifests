@@ -8,3 +8,4 @@ resources:
 - hpa.yaml
 images:
 - name: seongjaegreen/templify-history
+  newTag: "202503082327"

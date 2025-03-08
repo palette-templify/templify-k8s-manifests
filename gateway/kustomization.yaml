@@ -7,3 +7,4 @@ resources:
 - ingress.yaml
 images:
 - name: seongjaegreen/templify-gateway
+  newTag: "202503082327"

@@ -7,3 +7,4 @@ resources:
 - service.yaml
 images:
 - name: seongjaegreen/templify-transform
+  newTag: "202503082327"
