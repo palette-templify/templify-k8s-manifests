@@ -5,7 +5,6 @@ resources:
 - namespace.yaml
 - deployment.yaml
 - service.yaml
-- hpa.yaml
 images:
 - name: seongjaegreen/templify-history
   newTag: "202503082343"
