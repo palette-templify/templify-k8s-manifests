@@ -4,7 +4,7 @@ metadata:
   name: gateway-ingress
 spec:
   rules:
-    - host: gateway.211.254.212.252.sslip.io
+    - host: gateway.211.254.213.33.sslip.io
       http:
         paths:
           - path: /
