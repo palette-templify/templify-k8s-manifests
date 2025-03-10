@@ -38,3 +38,10 @@ spec:
                 secretKeyRef:
                   name: auth-secret
                   key: JWT_SECRET
+          lifecycle:
+            preStop:
+              exec:
+                command:
+                  - "/bin/sh"
+                  - "-c"
+                  - "psql -h $PGHOST -U $PGUSER -d $PGDATABASE -c \"SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE state = 'idle' AND client_addr = '$(hostname -i)';\""
