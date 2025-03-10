@@ -7,4 +7,4 @@ resources:
 - service.yaml
 images:
 - name: seongjaegreen/templify-history
-  newTag: "202503101052"
+  newTag: "202503101310"
